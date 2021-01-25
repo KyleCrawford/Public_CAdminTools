@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppSettings>
+	<LocalFiles>
+		<LocalFiles>C:\users\[username]\CAdminTools</LocalFiles>
+	</LocalFiles>
+	<Browsers>
+		<firefox>C:\Program Files\Mozilla Firefox\firefox.exe</firefox>
+		<iexplore>C:\Program Files\internet explorer\iexplore.exe</iexplore>
+		<iexplorex86>C:\Program Files (x86)\Internet Explorer\iexplore.exe</iexplorex86>
+		<Chromex86>C:\Program Files (x86)\Google\Chrome\Application\Chrome.exe</Chromex86>
+		<MicrosoftEdge>C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe</MicrosoftEdge>
+	</Browsers>
+	<Websites>
+		<IAMPasswordReset>Removed for Security</IAMPasswordReset>
+		<IAMHomePage>Removed for Security</IAMHomePage>
+		<IAMLoginPage>Removed for Security</IAMLoginPage>
+	</Websites>
+	<DefaultText>
+		<UserName>UserName</UserName>
+		<FirstName>First Name</FirstName>
+		<LastName>Last Name</LastName>
+		<Email>Email Address</Email>
+	</DefaultText>
+	<LANDeskServers>
+		<Edmonton>RemovedCore01</Edmonton>
+		<RedDeer>RemovedCore02</RedDeer>
+		<Calgary>RemovedCore03</Calgary>
+	</LANDeskServers>
+	<IAMIDs>
+		<UserNameID>searchModel.searchCriterias3.searchValue</UserNameID>
+		<FirstNameID>searchModel.searchCriterias1.searchValue</FirstNameID>
+		<LastNameID>searchModel.searchCriterias0.searchValue</LastNameID>
+		<EmailID>searchModel.searchCriterias2.searchValue</EmailID>
+		<GoButtonID>search-advanced-btn-Request-ExistingUserSearch-0-ExistingUser</GoButtonID>
+	</IAMIDs>
+	<VirtualMachines>
+		<EMSiUserVM1>vdwrkstn0290</EMSiUserVM1>
+		<EMSiUserVM2>vdwrkstn0291</EMSiUserVM2>
+		<EMSiUserVM3>vdwrkstn0292</EMSiUserVM3>
+		<EMSiUserVM4>vdwrkstn0293</EMSiUserVM4>
+		<EMSiUserVM5>vdwrkstn0294</EMSiUserVM5>
+		<FileRecovery>wsnsrclient03</FileRecovery>
+		<CallBoard>vdwrkstn0122</CallBoard>
+		<CernerMillenniumApplicationVM>vdwrkstn0121</CernerMillenniumApplicationVM>
+	</VirtualMachines>
+</AppSettings>
