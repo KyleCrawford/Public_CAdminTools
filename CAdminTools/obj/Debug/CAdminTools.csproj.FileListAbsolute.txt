@@ -58,7 +58,6 @@ E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\bin\Debug\CAd
 E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\bin\Debug\CAdminTools.exe
 E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\bin\Debug\CAdminTools.pdb
 E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\bin\Debug\Microsoft.Management.Infrastructure.dll
-E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\obj\Debug\CAdminTools.csprojAssemblyReference.cache
 E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\obj\Debug\Interop.IWshRuntimeLibrary.dll
 E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\obj\Debug\CAdminTools.csproj.ResolveComReference.cache
 E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\obj\Debug\CAdminTools.CustomizeForm.resources

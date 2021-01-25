@@ -7,7 +7,6 @@ Description: A tool designed to be used by the AHS IT Service Desk to bring usef
             of an AHS IT support tech.
 
 Author: Kyle Crawford
-Why is this not working the way it was explained to me!?
 
 *******************************************************/
 using System;
