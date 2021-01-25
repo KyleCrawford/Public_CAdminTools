@@ -50,10 +50,7 @@ namespace CAdminTools
         /// compName is the computer name to attempt action
         /// </summary>
 
-
         private PSToolsCS _pSTools;
-
-        
 
         //Public delegate to provide access to other forms to write to the main forms output textbox
         public delvoidstring DelPassToOutput;
@@ -108,13 +105,6 @@ namespace CAdminTools
             get => _settings.LocalSettingsSavePath;
         }
 
-        //CustomiseVisuals cv = new CustomiseVisuals();
-        public void ChangeVisuals(CustomiseVisuals cv)
-        {
-            
-        }
-
-
         int _formWidth;
 
         /// <summary>
@@ -126,18 +116,8 @@ namespace CAdminTools
 
             _settings = new AppSettings();
 
-
-            ///////////
-            ///
-            //ComBox_VMs.Items.Add("vdwrkstn0291");
-
             this.Width = this.Width - TxtBox_Notes.Width - 15;
             _formWidth = this.Width;
-
-
-            //  Bitmap bmp = new Bitmap(CAdminTools.Properties.Resources.AHSPng_86x80NB);
-
-            // bmp.MakeTransparent(Color.FromKnownColor(KnownColor.Control));
 
             // PicBox_Main.Image = bmp;
             PicBox_Main.BackColor = Color.Transparent;
@@ -146,9 +126,7 @@ namespace CAdminTools
             _pSTools = new PSToolsCS(Environment.CurrentDirectory + @"\PSTools");
             _pSTools.LookupFinished += PSReturn;
 
-            WindowsFunctions.OutputPrinting += PrintReturn;
-
-            
+            WindowsFunctions.OutputPrinting += PrintReturn;    
         }
 
         /// <summary>
@@ -175,105 +153,9 @@ namespace CAdminTools
 
         private void LoadCustomisation()
         {
-            //so... here we need to load all the settings in here.
-
-
-            //SaveDefaultVisualsProfile();
-
             CustomiseVisuals visuals = new CustomiseVisuals(this);
             visuals.LoadProfile();
-
         }
-
-
-
-        private void SaveDefaultVisualsProfile()
-        {
-            XmlDocument xmldoc = new XmlDocument();
-            xmldoc.Load(_settings.LocalSettingsSavePath + @"\LocalSettings.xml");
-            
-            /*
-            if (xmldoc.SelectSingleNode("//Customisation") == null)
-            {
-                //no profile exists, gotta create xml from scratch
-                XmlNode settingsRoot = xmldoc.SelectSingleNode("//LocalSettings");
-
-                XmlElement customisation = xmldoc.CreateElement("Customisation");
-                settingsRoot.AppendChild(customisation);
-
-                XmlElement visualsProfile = xmldoc.CreateElement("VisualsProfile");
-                customisation.AppendChild(visualsProfile);
-
-                XmlElement formColour = xmldoc.CreateElement("FormColour");
-
-            }
-            else
-            {
-                //modify values
-            }
-            */
-            
-            
-            
-            
-            
-            
-            //XmlNode settingsRoot = xmldoc.SelectSingleNode("//LocalSettings");
-
-            //XmlElement customisation = xmldoc.CreateElement("Customisation");
-            //settingsRoot.AppendChild(customisation);
-
-            XmlElement defaultProfile = xmldoc.CreateElement("DefaultProfile");
-            //customisation.AppendChild(defaultProfile);
-            
-            XmlElement formColour = xmldoc.CreateElement("FormColour");
-            formColour.InnerText = this.BackColor.ToArgb().ToString();
-
-
-            XmlElement formImage = xmldoc.CreateElement("FormImage");
-            formImage.InnerText = "";
-
-
-
-            //XmlAttribute opacity = xmldoc.CreateAttribute("Form");
-
-
-            defaultProfile.AppendChild(formColour);
-            defaultProfile.AppendChild(formImage);
-
-
-            //xmldoc.AppendChild(settingsRoot);
-
-            xmldoc.Save(_settings.LocalSettingsSavePath + @"\LocalSettings.xml");
-
-
-
-
-
-
-            /*
-            XmlDocument xlDoc = new XmlDocument();
-            xlDoc.Load(_settings.LocalSettingsSavePath + @"\LocalSettings.xml");
-            //xlDoc.SelectSingleNode("")
-            //create the profile xml
-            XmlElement rootNode = xlDoc.CreateElement("Customisation");
-            xlDoc.AppendChild(rootNode);
-
-            XmlNode defaultProfile = xlDoc.CreateElement("DefaultProfile");
-            rootNode.AppendChild(defaultProfile);
-
-            XmlNode formColour = xlDoc.CreateElement("FormColour");
-            formColour.InnerText = Color.FromKnownColor(KnownColor.Control).ToArgb().ToString();
-            defaultProfile.AppendChild(formColour);
-
-            XmlNode formPic = xlDoc.CreateElement("FormPicture");
-            formPic.InnerText = this.BackgroundImage.ToString();
-            defaultProfile.AppendChild(formColour);
-            */
-
-
-        }
-
 
         /// <summary>
         /// When the textbox is changed, clears the labels and checks if there is text
@@ -375,7 +257,6 @@ namespace CAdminTools
             {
                 //need to set the default browser for the user
                 SetDefaultBrowser();
-
             }
 
             if (TextBoxCheck(TxtBox_CompName))
@@ -751,75 +632,6 @@ namespace CAdminTools
                 SaveLocalFiles(_settings.LocalSettingsSavePath);
             }
             
-
-
-
-        }
-
-        ///Beyond here be test code. Ye be warned!
-
-        private void Btn_Printers_Click(object sender, EventArgs e)
-        {
-            if (TextBoxCheck(TxtBox_CompName))
-            {
-                AvailablePrinters(TxtBox_CompName.Text);
-            }
-        }
-
-
-
-        //testing the PSExec Class
-        private void Btn_RemExec_Click(object sender, EventArgs e)
-        {
-            PSToolsCS PSTools = new PSToolsCS(Environment.CurrentDirectory + @"\PSTools");
-
-            PSTools.LookupFinished += TakePSOutout;
-
-            PSTools.GetUpTime(TxtBox_CompName.Text);
-
-        }
-
-        void TakePSOutout(object p, EventArgs e)
-        {
-            PrintOutput((e as PSToolsEventArgs).Message);
-        }
-
-        private void Btn_CHFSSearch_Click(object sender, EventArgs e)
-        {
-
-            
-            //MessageBox.Show("Feature not implemented yet");
-            //AppSettings settings = new AppSettings();
-            // settings.LoadSettings(Environment.CurrentDirectory);
-
-
-
-            //this.BackgroundImage = Image.FromFile(@"C:\users\kylecrawford\desktop\AdminTools Backgrounds\ananas.png");
-
-
-
-            //ComBox_VMs.SelectedIndex = -1;
-
-            //var test = settings.LANDeskServers;
-
-            //ShrinkForm();
-
-            //NotepadForm notes = new NotepadForm();
-
-
-            //notes.Show();
-            //notes.Location = new System.Drawing.Point(this.Location.X - notes.Width + 15, this.Location.Y);
-        }
-
-        private void Btn_PrinterSearch_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Feature not implemented yet");
-            Console.WriteLine(Environment.CurrentDirectory);
-        }
-
-        private void Btn_SecondayPC_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Feature not implemented yet");
         }
 
         private void Btn_ShowNotes_Click(object sender, EventArgs e)
@@ -883,7 +695,43 @@ namespace CAdminTools
             window.ShowDialog();
         }
 
+        private void RBtn_Custom_CheckedChanged(object sender, EventArgs e)
+        {
+            //enable the prefix radio buttons
+            if (RBtn_Custom.Checked)
+            {
+                foreach (RadioButton rb in Pnl_OpenSitePrefix.Controls)
+                {
+                    rb.Enabled = true;
+                }
+                //change the drop down style
+                ComBox_OpenSite.DropDownStyle = ComboBoxStyle.DropDown;
+                ComBox_OpenSite.Text = "Enter URL";
+            }
+            else
+            {
+                foreach (RadioButton rb in Pnl_OpenSitePrefix.Controls)
+                {
+                    rb.Enabled = false;
+                }
+                ComBox_OpenSite.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
 
+
+            //make sure the default text for the opensite combobox is there
+            if (!ComBox_OpenSite.Items.Contains("Open Site"))
+            {
+                ComBox_OpenSite.Items.Add("Open Site");
+            }
+            ComBox_OpenSite.SelectedItem = "Open Site";
+        }
+
+
+
+
+
+
+        ///Beyond here be test code. Ye be warned!
 
         public void UpdateForm()
         {
@@ -940,39 +788,50 @@ namespace CAdminTools
             {
                 this.BackgroundImage = Image.FromFile(ofd.FileName);
             }
-        
-    }
 
-        private void RBtn_Custom_CheckedChanged(object sender, EventArgs e)
-        {
-            //enable the prefix radio buttons
-            if (RBtn_Custom.Checked)
-            {
-                foreach (RadioButton rb in Pnl_OpenSitePrefix.Controls)
-                {
-                    rb.Enabled = true;
-                }
-                //change the drop down style
-                ComBox_OpenSite.DropDownStyle = ComboBoxStyle.DropDown;
-                ComBox_OpenSite.Text = "Enter URL";
-            }
-            else
-            {
-                foreach (RadioButton rb in Pnl_OpenSitePrefix.Controls)
-                {
-                    rb.Enabled = false;
-                }
-                ComBox_OpenSite.DropDownStyle = ComboBoxStyle.DropDownList;
-            }
-
-
-            //make sure the default text for the opensite combobox is there
-            if (!ComBox_OpenSite.Items.Contains("Open Site"))
-            {
-                ComBox_OpenSite.Items.Add("Open Site");
-            }
-            ComBox_OpenSite.SelectedItem = "Open Site";
         }
+        private void Btn_Printers_Click(object sender, EventArgs e)
+        {
+            if (TextBoxCheck(TxtBox_CompName))
+            {
+                //AvailablePrinters(TxtBox_CompName.Text);
+            }
+        }
+
+
+
+        //testing the PSExec Class
+        private void Btn_RemExec_Click(object sender, EventArgs e)
+        {
+            PSToolsCS PSTools = new PSToolsCS(Environment.CurrentDirectory + @"\PSTools");
+
+            PSTools.LookupFinished += TakePSOutout;
+
+            PSTools.GetUpTime(TxtBox_CompName.Text);
+
+        }
+
+        void TakePSOutout(object p, EventArgs e)
+        {
+            PrintOutput((e as PSToolsEventArgs).Message);
+        }
+
+        private void Btn_CHFSSearch_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Feature not implemented yet");
+        }
+
+        private void Btn_PrinterSearch_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Feature not implemented yet");
+            Console.WriteLine(Environment.CurrentDirectory);
+        }
+
+        private void Btn_SecondayPC_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Feature not implemented yet");
+        }
+
     }
 
 }

@@ -72,3 +72,4 @@ E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\obj\Debug\CAd
 E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\obj\Debug\CAdminTools.csproj.CopyComplete
 E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\obj\Debug\CAdminTools.exe
 E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\obj\Debug\CAdminTools.pdb
+E:\ProgramData\Projects\CAdminPublic\PublicCAdminTools\CAdminTools\obj\Debug\CAdminTools.csprojAssemblyReference.cache
