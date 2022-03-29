@@ -61,16 +61,19 @@ Please use the numbering on the image below to match up with the explaination.
   All functions will trigger an entry in the output log to indicate something is working, has succeeded or failed. This can be cleared with the 'Clear Output' button.
 
 9. Customize
-  The form can be customised to make it look a little more appealing that default system grey.
+  The form can be customised to make it look a little more appealing than default system grey.
   
   ![image](https://user-images.githubusercontent.com/14237962/160683476-cac793c8-4032-4992-ae67-b01ce160b70c.png)
   
-  You can either load a background image or select a background colour.
-  Buttons, Panels and Labels can all have their colour and opacity set.
-  The font type and colour can be changed.
-  These settings can be saved so the next time the program opens the settings persist.
-  There is also the option to restore to default.
+  You can either load a background image or select a background colour.  
+  Buttons, Panels and Labels can all have their colour and opacity set.  
+  The font type and colour can be changed.  
+  These settings can be saved so the next time the program opens the settings persist.  
+  There is also the option to restore to default.  
 
 ![image](https://user-images.githubusercontent.com/14237962/160683985-c6ccd5cf-371a-4a67-b2f3-eac513937c30.png)
 
 The settings are saved to C:\users\[username]\CAdminTools\LocalSettings.xml
+
+10. Finally, hidden under a small button, is a multi line text box for the tech to enter whatever notes they need to enter.
+  This panel can be hidden and shown with the small button
