@@ -73,7 +73,7 @@ Please use the numbering on the image below to match up with the explaination.
 
 ![image](https://user-images.githubusercontent.com/14237962/160683985-c6ccd5cf-371a-4a67-b2f3-eac513937c30.png)
 
-The settings are saved to C:\users\[username]\CAdminTools\LocalSettings.xml
+The settings are saved to C:\users\ [username]\CAdminTools\LocalSettings.xml
 
 10. Finally, hidden under a small button, is a multi line text box for the tech to enter whatever notes they need to enter.
   This panel can be hidden and shown with the small button
