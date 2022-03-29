@@ -4,7 +4,7 @@ Public Version of the CAdminTools App
 This version will not work properly as all sensitive data has been removed.
 
 
-This tool was made for Alberta Health Services (AHS) IT Service desk.
+This tool was made for Alberta Health Services (AHS) IT Service Desk.
 
 The tool has many functions to enable the tech to more easily complete their role.
 
