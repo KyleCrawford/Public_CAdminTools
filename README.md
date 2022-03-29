@@ -15,7 +15,7 @@ Below is an overview of the functions and how they were designed to be used.
 
 Please use the numbering on the image below to match up with the explaination.
 
-![AdminToolsDetail](https://user-images.githubusercontent.com/14237962/160677640-43221b14-cc73-4bab-85f2-f4c7a4bad601.jpg)
+![AdminToolsDetail](https://user-images.githubusercontent.com/14237962/160680166-9bb37ccf-1cc5-4003-af0f-a17575fc688e.jpg)
 
 1. Computer Name, Status and core
   Allows the tech to enter a computer name and the program will automatically attempt to ping the computer and determine if the computer is online, and if it is, the IP address, and the current logged in user. 
