@@ -71,7 +71,7 @@ Please use the numbering on the image below to match up with the explaination.
   These settings can be saved so the next time the program opens the settings persist.  
   There is also the option to restore to default.  
 
-![image](https://user-images.githubusercontent.com/14237962/160683985-c6ccd5cf-371a-4a67-b2f3-eac513937c30.png)
+![image](https://user-images.githubusercontent.com/14237962/160684684-2d8f8562-7b14-4f90-a2e4-0ca956de521e.png)
 
 The settings are saved to C:\users\ [username]\CAdminTools\LocalSettings.xml
 
